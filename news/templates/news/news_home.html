@@ -6,7 +6,18 @@
 {% block content %}
     <div class="features">
         <h1>News on the website</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt natus optio, eius iste et perspiciatis officiis illum incidunt nesciunt qui molestias, atque fugit ea rem, ab necessitatibus quam libero!</p>
-        <button class="btn btn-danger">Just click here</button>
+            {%  if news %}
+            {% for el in news %}
+            <div class="alert alert-warning">
+                <h2>{{ el.title }}</h2>
+                <p>{{ el.intro }}</p>
+                <p>{{ el.date }}</p>
+            </div>
+        {% endfor %}
+        {% else %}
+            <p>There are no articles</p>
+        {% endif %}
+
+        {# Comment #}
     </div>
 {% endblock %}
