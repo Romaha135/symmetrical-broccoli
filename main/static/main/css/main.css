@@ -76,12 +76,14 @@ main .features p {
 }
 
 .alert-warning {
-    float: left;
     clear: both;
-    width: 400px;
-    margin: 20px 34%;
+    width: 800px;
+    margin: 20px auto;
     text-align: left;
+;
+
 }
+
 
 form {
     margin-left: 32%;
