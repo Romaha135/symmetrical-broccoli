@@ -6,13 +6,15 @@
 {% block content %}
     <div class="features">
         <h1>Add article form</h1>
-       <form action="post">
-            <input type="text" placeholder="Title of the article" class="form-control"><br>
-            <input type="text" placeholder="Intro of the article" class="form-control"><br>
-            <textarea class="form-control" placeholder="Text of the article"></textarea><br>
-            <input type="date" class="form-control"><br>
-            <input type="time" class="form-control"><br>
-            <button class="btn btn-success" type="submit">Add article</button><br>
+       <form method="post" >
+            {% csrf_token %}
+
+            {{ form.title }} <br>
+            {{ form.intro }} <br>
+            {{ form.full_text }} <br>
+            {{ form.date }} <br>
+            <span>{{ error }}</span>
+            <button type="submit" class="btn btn-success">Add article</button>
        </form>
     </div>
 {% endblock %}

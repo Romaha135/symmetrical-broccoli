@@ -12,5 +12,5 @@ class Articles(models.Model):
     
     class Meta:
         verbose_name = 'Article'
-        verbose_name_plural = 'Articles'
+        verbose_name_plural = 'Articles' 
 
